@@ -39,5 +39,38 @@
         android:id="@+id/homeFragment"
         android:name="com.example.shimon.quizappintern.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_kotlinQuizFragment"
+            app:destination="@id/kotlinQuizFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_javaQuizFragment"
+            app:destination="@id/javaQuizFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_flutterQuizFragment"
+            app:destination="@id/flutterQuizFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_pythonQuizFragment"
+            app:destination="@id/pythonQuizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kotlinQuizFragment"
+        android:name="com.example.shimon.quizappintern.KotlinQuizFragment"
+        android:label="fragment_kotlin_quiz"
+        tools:layout="@layout/fragment_kotlin_quiz" />
+    <fragment
+        android:id="@+id/javaQuizFragment"
+        android:name="com.example.shimon.quizappintern.JavaQuizFragment"
+        android:label="fragment_java_quiz"
+        tools:layout="@layout/fragment_java_quiz" />
+    <fragment
+        android:id="@+id/flutterQuizFragment"
+        android:name="com.example.shimon.quizappintern.FlutterQuizFragment"
+        android:label="fragment_flutter_quiz"
+        tools:layout="@layout/fragment_flutter_quiz" />
+    <fragment
+        android:id="@+id/pythonQuizFragment"
+        android:name="com.example.shimon.quizappintern.PythonQuizFragment"
+        android:label="fragment_python_quiz"
+        tools:layout="@layout/fragment_python_quiz" />
 </navigation>
