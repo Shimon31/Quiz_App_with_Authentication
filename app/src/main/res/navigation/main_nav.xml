@@ -52,6 +52,10 @@
         <action
             android:id="@+id/action_homeFragment_to_pythonQuizFragment"
             app:destination="@id/pythonQuizFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment4"
+            app:destination="@id/loginFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/kotlinQuizFragment"

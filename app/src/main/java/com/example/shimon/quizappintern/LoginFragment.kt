@@ -11,12 +11,20 @@ import androidx.navigation.fragment.findNavController
 import com.example.shimon.quizappintern.base.BaseFragment
 import com.example.shimon.quizappintern.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 
 
 class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::inflate) {
 
+    lateinit var firebaseUser: FirebaseUser
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        FirebaseAuth.getInstance().currentUser.let {
+
+            findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+
+        }
 
 
         binding.loginBTN.setOnClickListener {

@@ -8,11 +8,25 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.shimon.quizappintern.base.BaseFragment
 import com.example.shimon.quizappintern.databinding.FragmentHomeBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
+
+        binding.logoutBTN.setOnClickListener {
+
+            val auth = FirebaseAuth.getInstance()
+
+            auth.signOut().let {
+                findNavController().navigate(R.id.action_homeFragment_to_loginFragment4)
+            }
+
+
+        }
 
         binding.kotlin.setOnClickListener {
 
