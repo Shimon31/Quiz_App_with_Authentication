@@ -20,7 +20,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        FirebaseAuth.getInstance().currentUser.let {
+        FirebaseAuth.getInstance().currentUser?.let {
 
             findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
 

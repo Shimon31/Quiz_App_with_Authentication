@@ -2,4 +2,9 @@
     <string name="app_name">Quiz app(Intern)</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="kotlinQuestion">How do you insert COMMENTS in Kotlin code?</string>
+    <string name="kotlinQuestion1"> -- This is a comment</string>
+    <string name="kotlinQuestion2"> /* This is a comment</string>
+    <string name="kotlinQuestion3"> //This is a comment</string>
+    <string name="kotlinQuestion4"> # This is a comment</string>
 </resources>

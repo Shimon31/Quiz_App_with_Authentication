@@ -12,40 +12,37 @@ import com.google.firebase.auth.FirebaseAuth
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
 
+    private val auth = FirebaseAuth.getInstance()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
 
 
         binding.logoutBTN.setOnClickListener {
-
-            val auth = FirebaseAuth.getInstance()
-
-            auth.signOut().let {
-                findNavController().navigate(R.id.action_homeFragment_to_loginFragment4)
+            auth.signOut().apply {
+                findNavController().navigate(R.id.action_homeFragment_to_loginFragment)
             }
-
-
         }
 
         binding.kotlin.setOnClickListener {
 
-            findNavController().navigate(R.id.action_homeFragment_to_kotlinQuizFragment)
+            findNavController().navigate(R.id.action_homeFragment_to_kotlinPlayFragment)
 
         }
         binding.java.setOnClickListener {
 
-            findNavController().navigate(R.id.action_homeFragment_to_javaQuizFragment)
+            findNavController().navigate(R.id.action_homeFragment_to_javaPlayFragment)
 
         }
         binding.flutter.setOnClickListener {
 
-            findNavController().navigate(R.id.action_homeFragment_to_flutterQuizFragment)
+            findNavController().navigate(R.id.action_homeFragment_to_flutterPlayFragment)
 
         }
         binding.python.setOnClickListener {
 
-            findNavController().navigate(R.id.action_homeFragment_to_pythonQuizFragment)
+            findNavController().navigate(R.id.action_homeFragment_to_pythonPlayFragment)
 
         }
 

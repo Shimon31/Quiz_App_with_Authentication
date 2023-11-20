@@ -41,40 +41,65 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_kotlinQuizFragment"
-            app:destination="@id/kotlinQuizFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_javaQuizFragment"
-            app:destination="@id/javaQuizFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_flutterQuizFragment"
-            app:destination="@id/flutterQuizFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_pythonQuizFragment"
-            app:destination="@id/pythonQuizFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_loginFragment4"
+            android:id="@+id/action_homeFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_kotlinPlayFragment"
+            app:destination="@id/kotlinPlayFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_javaPlayFragment"
+            app:destination="@id/javaPlayFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_flutterPlayFragment"
+            app:destination="@id/flutterPlayFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_pythonPlayFragment"
+            app:destination="@id/pythonPlayFragment" />
 
     </fragment>
     <fragment
-        android:id="@+id/kotlinQuizFragment"
-        android:name="com.example.shimon.quizappintern.KotlinQuizFragment"
-        android:label="fragment_kotlin_quiz"
-        tools:layout="@layout/fragment_kotlin_quiz" />
+        android:id="@+id/kotlinPlayFragment"
+        android:name="com.example.shimon.quizappintern.kotlinPlayFragment"
+        android:label="fragment_kotlin_play"
+        tools:layout="@layout/fragment_kotlin_play" >
+        <action
+            android:id="@+id/action_kotlinPlayFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/javaQuizFragment"
-        android:name="com.example.shimon.quizappintern.JavaQuizFragment"
-        android:label="fragment_java_quiz"
-        tools:layout="@layout/fragment_java_quiz" />
+        android:id="@+id/javaPlayFragment"
+        android:name="com.example.shimon.quizappintern.JavaPlayFragment"
+        android:label="fragment_java_play"
+        tools:layout="@layout/fragment_java_play" >
+        <action
+            android:id="@+id/action_javaPlayFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/flutterQuizFragment"
-        android:name="com.example.shimon.quizappintern.FlutterQuizFragment"
-        android:label="fragment_flutter_quiz"
-        tools:layout="@layout/fragment_flutter_quiz" />
+        android:id="@+id/flutterPlayFragment"
+        android:name="com.example.shimon.quizappintern.FlutterPlayFragment"
+        android:label="fragment_flutter_play"
+        tools:layout="@layout/fragment_flutter_play" >
+        <action
+            android:id="@+id/action_flutterPlayFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/pythonQuizFragment"
-        android:name="com.example.shimon.quizappintern.PythonQuizFragment"
-        android:label="fragment_python_quiz"
-        tools:layout="@layout/fragment_python_quiz" />
+        android:id="@+id/pythonPlayFragment"
+        android:name="com.example.shimon.quizappintern.PythonPlayFragment"
+        android:label="fragment_python_play"
+        tools:layout="@layout/fragment_python_play" >
+        <action
+            android:id="@+id/action_pythonPlayFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.shimon.quizappintern.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

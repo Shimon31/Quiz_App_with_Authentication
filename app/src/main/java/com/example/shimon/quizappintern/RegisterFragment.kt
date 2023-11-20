@@ -48,21 +48,19 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(FragmentRegisterB
 
     private fun registerUser(name: String, email: String, password: String) {
         val auth = FirebaseAuth.getInstance()
-        auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener{ task ->
+        auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener { task ->
 
-            if (task.isSuccessful){
+            if (task.isSuccessful) {
+                // Navigate to the login page upon successful registration
                 findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
-
-
-            }else{
-
+                Toast.makeText(requireContext(), "Registration Successful", Toast.LENGTH_SHORT).show()
+            } else {
                 Toast.makeText(requireContext(), "${task.exception?.message}", Toast.LENGTH_SHORT).show()
-
             }
 
         }
-
     }
+
     fun isEmailValid(email: String): Boolean {
         return Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
