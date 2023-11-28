@@ -49,8 +49,8 @@ class JavaPlayFragment : BaseFragment<FragmentJavaPlayBinding>(FragmentJavaPlayB
             "protected",
             "private",
             "public",
-            " All of the above",
-            " All of the above"
+            "All of the above",
+            "All of the above"
         ),
 
         Quiz(
@@ -65,7 +65,7 @@ class JavaPlayFragment : BaseFragment<FragmentJavaPlayBinding>(FragmentJavaPlayB
         Quiz(
             "What is the purpose of the static keyword in Java?",
             " It makes methods execute asynchronously.",
-            " It allows access to the class members without creating an object of the class.",
+            "It allows access to the class members without creating an object of the class.",
             "It creates an instance of the class.",
             " It makes variables constant and unchangeable.\n",
             "It allows access to the class members without creating an object of the class."
@@ -85,8 +85,8 @@ class JavaPlayFragment : BaseFragment<FragmentJavaPlayBinding>(FragmentJavaPlayB
             " Prevents variable reassignment",
             " Prevents method overriding",
             "Prevents inheritance",
-            " All of the above",
-            " All of the above"
+            "All of the above",
+            "All of the above"
         ),
 
         Quiz(

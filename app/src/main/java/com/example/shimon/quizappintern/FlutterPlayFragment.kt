@@ -228,7 +228,7 @@ class FlutterPlayFragment :
                     bundle.putString("wrong", wrong.toString())
                     bundle.putString("numOfQuestion", quizList.size.toString())
                     findNavController().navigate(
-                        R.id.action_flutterPlayFragment_to_resultFragment,
+                        R.id.action_pythonPlayFragment_to_resultFragment,
                         bundle
                     )
 
@@ -244,6 +244,5 @@ class FlutterPlayFragment :
 
 
     }
-
 
 }

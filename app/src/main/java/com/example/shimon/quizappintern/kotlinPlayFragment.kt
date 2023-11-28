@@ -22,10 +22,10 @@ class kotlinPlayFragment :
 
         Quiz(
             "What is Kotlin primarily used for?",
-            " Front-end web development",
+            "Front-end web development",
             "Android app development",
             "Data analysis",
-            " Game development",
+            "Game development",
             "Android app development"
         ),
         Quiz(
@@ -33,71 +33,71 @@ class kotlinPlayFragment :
             "It's a purely functional programming language",
             "Kotlin is interoperable with Java",
             "It does not support object-oriented programming",
-            " Kotlin is developed by Microsoft",
-            " Kotlin is interoperable with Java"
+            "Kotlin is developed by Microsoft",
+            "Kotlin is interoperable with Java"
         ),
         Quiz(
             "Which keyword in Kotlin is used to declare a variable that can be reassigned?",
             "val",
-            " var",
+            "var",
             "const",
-            " let",
-            " var"
+            "let",
+            "var"
         ),
         Quiz(
             "What is the function used to define an entry point in a Kotlin program?",
             "main()",
-            " start()",
-            " execute()",
-            " entry()",
+            "start()",
+            "execute()",
+            "entry()",
             "main()"
         ),
         Quiz(
             "In Kotlin, how is a single-line comment denoted?",
-            " '",
-            "  #",
-            "  /*",
-            "  //",
-            " //"
+            "'",
+            "#",
+            "/*",
+            "//",
+            "//"
         ),
         Quiz(
             "What is the Kotlin standard function to perform null-checks and safely access properties?",
-            " let()",
-            " safeCall( )",
-            " verify()",
-            " checkNotNull()",
-            " let()"
+            "let()",
+            "safeCall( )",
+            "verify()",
+            "checkNotNull()",
+            "let()"
         ),
         Quiz(
             "Which scope function is used in Kotlin to execute a block of code on a non-null object?",
-            " with()",
-            "  apply()",
-            "  also()",
-            "  run()",
-            " run()"
+            "with()",
+            "apply()",
+            "also()",
+            "run()",
+            "run()"
         ),
         Quiz(
             "What Kotlin feature prevents null pointer exceptions at compile-time?",
             "Safe calls",
-            "  Nullable types",
-            " Non-null assertions",
-            "  Nullable types",
-            " Nullable types"
+            "Non Nullable types",
+            "Non-null assertions",
+            "Nullable types",
+            "Nullable types"
         ),
         Quiz(
             "Which function is used to concatenate strings in Kotlin?",
             "merge()",
-            " concat()",
-            " plus()",
+            "concat()",
+            "plus()",
             "joinToString()",
             "plus()"
         ),
         Quiz(
             "What is the equivalent of a Java switch statement in Kotlin?",
             "when",
-            " match",
-            " caseOf",
-            " switch",
+            "match",
+            "caseOf",
+            "switch",
             "when"
         )
     )
@@ -107,7 +107,7 @@ class kotlinPlayFragment :
     var miliLestSec = 30000L
     var index = 0
     var hasFinished = false
-    var skip = -1
+    var skip = 0
     var correct = 0
     var wrong = 0
 
@@ -228,7 +228,7 @@ class kotlinPlayFragment :
                     bundle.putString("wrong", wrong.toString())
                     bundle.putString("numOfQuestion", quizList.size.toString())
                     findNavController().navigate(
-                        R.id.action_kotlinPlayFragment_to_resultFragment,
+                        R.id.action_pythonPlayFragment_to_resultFragment,
                         bundle
                     )
 
@@ -244,6 +244,5 @@ class kotlinPlayFragment :
 
 
     }
-
 
 }

@@ -1,5 +1,6 @@
 package com.example.shimon.quizappintern
 
+import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Patterns
 import androidx.fragment.app.Fragment
@@ -7,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.navigation.fragment.findNavController
 import com.example.shimon.quizappintern.base.BaseFragment
 import com.example.shimon.quizappintern.databinding.FragmentLoginBinding
@@ -49,6 +51,15 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(FragmentLoginBinding::i
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
 
         }
+
+        val textColor = when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
+            Configuration.UI_MODE_NIGHT_NO -> R.color.black
+            else -> R.color.black
+        }
+
+        binding.emailET.setTextColor(ContextCompat.getColor(requireContext(), textColor))
+        binding.passET.setTextColor(ContextCompat.getColor(requireContext(), textColor))
+
         
     }
 
